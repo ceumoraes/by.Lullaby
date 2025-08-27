@@ -1,75 +1,128 @@
 <!DOCTYPE html>
+<!-- Declara que este é um documento HTML5 -->
+
 <html lang="pt-br">
+<!-- Elemento raiz do HTML, define o idioma como português do Brasil -->
 
 <head>
   <meta charset="UTF-8" />
+  <!-- Define a codificação de caracteres para UTF-8 -->
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Garante responsividade em dispositivos móveis -->
+  
   <title>By Lullaby - CONTATO</title>
+  <!-- Título da aba do navegador -->
+  
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet" />
+  <!-- Importa a fonte Montserrat do Google Fonts -->
+  
   <link rel="stylesheet" href="css/style.css" />
+  <!-- Link para o arquivo CSS principal -->
+  
   <link rel="icon" href="img/triangulo_page.png" type="image/x-icon" />
+  <!-- Define o ícone da aba do navegador -->
 </head>
 
 <body>
   <section class="header header-contato">
+  <!-- Seção do cabeçalho, com classe específica para a página de contato -->
+  
     <nav class="nav">
+      <!-- Menu de navegação -->
       <ul>
         <li class="portfolio"><a href="index.html">PORTFÓLIO</a></li>
+        <!-- Link para a página de portfólio -->
         <li class="selos"><a href="selos.html">SELOS</a></li>
+        <!-- Link para a página de selos -->
         <li class="contato ativo"><a href="contato.html">CONTATO</a></li>
+        <!-- Link para a página de contato, com classe "ativo" para indicar a página atual -->
       </ul>
     </nav>
+    
     <div class="hamburger" onclick="
         document.querySelector('.nav ul').classList.toggle('show');
         document.querySelector('.icons').classList.toggle('show');
     ">
       &#9776;
+      <!-- Botão hamburguer para menu mobile, alterna a visibilidade dos itens e ícones -->
     </div>
 
     <img class="logo logo-desktop" src="img/triangulo_metade.png" alt="Logo" />
-    <img class="logo logo-mobile" src="img/triangulo_page.png" alt="Logo" />
+    <!-- Logo exibida em telas desktop -->
 
+    <img class="logo logo-mobile" src="img/triangulo_page.png" alt="Logo" />
+    <!-- Logo exibida em telas mobile -->
 
     <div class="icons">
+      <!-- Container para ícones de redes sociais -->
+      
       <a href="https://www.behance.net/kadeajojo" target="_blank">
         <img class="icon-desktop" src="img/behance_white.svg" alt="Behance" />
         <img class="icon-mobile" src="img/behance.svg" alt="Behance" />
+        <!-- Links para Behance com ícones diferentes para desktop e mobile -->
       </a>
+      
       <a href="https://www.instagram.com/kadeajojo/" target="_blank">
         <img class="icon-desktop" src="img/instagram_white.svg" alt="Instagram" />
         <img class="icon-mobile" src="img/instagram.svg" alt="Instagram" />
+        <!-- Links para Instagram com ícones diferentes para desktop e mobile -->
       </a>
+      
       <a href="https://bsky.app/profile/kadeajojo.bsky.social" target="_blank">
         <img class="icon-desktop" src="img/bluesky_white.svg" alt="Bluesky" />
         <img class="icon-mobile" src="img/bluesky.svg" alt="Bluesky" />
+        <!-- Links para Bluesky com ícones diferentes para desktop e mobile -->
       </a>
+      
       <a href="https://www.youtube.com/@jojoslullaby" target="_blank">
         <img class="icon-desktop" src="img/youtube_white.svg" alt="YouTube" />
         <img class="icon-mobile" src="img/youtube.svg" alt="YouTube" />
+        <!-- Links para YouTube com ícones diferentes para desktop e mobile -->
       </a>
     </div>
 
   </section>
 
   <main class="container-contato">
+  <!-- Conteúdo principal da página de contato -->
+  
     <section class="lado-esquerdo">
+    <!-- Lado esquerdo do layout, geralmente com informações ou logo -->
+    
       <div class="logo">
         <img src="img/triangulo_page.png" alt="logo" />
+        <!-- Logo dentro do lado esquerdo -->
       </div>
+      
       <p class="descricao">AQUI É ONDE VOCÊ PODE ENTRAR EM CONTATO COMIGO (ORÇAMENTOS, DÚVIDAS E ETC.)</p>
-      </div>
+      <!-- Texto descritivo sobre o contato -->
+      
     </section>
 
     <section class="lado-direito">
+    <!-- Lado direito do layout, contendo o formulário de contato -->
+    
       <div class="form-container">
+      <!-- Container do formulário com estilo próprio -->
+      
         <form>
+        <!-- Formulário de contato -->
+        
           <label for="nome">como posso te chamar?</label>
           <input type="text" id="nome" />
+          <!-- Campo para nome do usuário -->
+          
           <label for="email">insira seu e-mail</label>
           <input type="email" id="email" />
+          <!-- Campo para e-mail do usuário -->
+          
           <label for="mensagem">sua mensagem</label>
           <textarea id="mensagem" name="mensagem"></textarea>
+          <!-- Campo para a mensagem do usuário -->
+          
           <button type="submit">enviar</button>
+          <!-- Botão para enviar o formulário -->
         </form>
       </div>
     </section>

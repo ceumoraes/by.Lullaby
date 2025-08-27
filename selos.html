@@ -1,63 +1,104 @@
 <!DOCTYPE html>
+<!-- Declara que este é um documento HTML5 -->
+
 <html lang="en">
+<!-- Elemento raiz do HTML, define o idioma como inglês -->
 
 <head>
     <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8 -->
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Torna o site responsivo em dispositivos móveis -->
+    
     <title>Selos – By Lullaby</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <!-- Título da aba do navegador -->
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Importa a fonte Montserrat do Google Fonts -->
+    
     <link rel="stylesheet" href="css/style.css">
+    <!-- Link para o arquivo CSS principal -->
+    
     <link rel="icon" href="img/triangulo_page.png" type="image/x-icon">
+    <!-- Define o ícone da aba do navegador -->
 </head>
 
 <body>
     <header>
+        <!-- Cabeçalho da página -->
+        
         <section class="header">
+            <!-- Container do menu e logo -->
+            
             <nav class="nav">
+                <!-- Menu de navegação -->
                 <ul>
                     <li class="portfolio"><a href="index.html">PORTFÓLIO</a></li>
+                    <!-- Link para a página de portfólio -->
+                    
                     <li class="selos ativo"><a href="selos.html">SELOS</a></li>
+                    <!-- Link para a página de selos, classe "ativo" indica a página atual -->
+                    
                     <li class="contato"><a href="contato.html">CONTATO</a></li>
+                    <!-- Link para a página de contato -->
                 </ul>
             </nav>
+            
             <div class="hamburger" onclick="
-        document.querySelector('.nav ul').classList.toggle('show');
-        document.querySelector('.icons').classList.toggle('show');
-    ">
+                document.querySelector('.nav ul').classList.toggle('show');
+                document.querySelector('.icons').classList.toggle('show');
+            ">
                 &#9776;
+                <!-- Botão hambúrguer para menu mobile; alterna visibilidade de menu e ícones -->
             </div>
 
             <div class="logo"><img src="img/triangulo_page.png" alt="Logo"></div>
+            <!-- Logo central do site -->
 
             <div class="icons">
-                <a href="https://www.behance.net/kadeajojo" target="_blank"><img src="img/behance.svg"
-                        alt="Behance"></a>
-                <a href="https://www.instagram.com/kadeajojo/" target="_blank"><img src="img/instagram.svg"
-                        alt="Instagram"></a>
-                <a href="https://bsky.app/profile/kadeajojo.bsky.social" target="_blank"><img src="img/bluesky.svg"
-                        alt="Bluesky"></a>
-                <a href="https://www.youtube.com/@jojoslullaby" target="_blank"><img src="img/youtube.svg"
-                        alt="YouTube"></a>
+                <!-- Container de ícones de redes sociais -->
+                
+                <a href="https://www.behance.net/kadeajojo" target="_blank"><img src="img/behance.svg" alt="Behance"></a>
+                <!-- Link para Behance -->
+                
+                <a href="https://www.instagram.com/kadeajojo/" target="_blank"><img src="img/instagram.svg" alt="Instagram"></a>
+                <!-- Link para Instagram -->
+                
+                <a href="https://bsky.app/profile/kadeajojo.bsky.social" target="_blank"><img src="img/bluesky.svg" alt="Bluesky"></a>
+                <!-- Link para Bluesky -->
+                
+                <a href="https://www.youtube.com/@jojoslullaby" target="_blank"><img src="img/youtube.svg" alt="YouTube"></a>
+                <!-- Link para YouTube -->
             </div>
         </section>
     </header>
 
     <main>
+        <!-- Conteúdo principal da página -->
+        
         <div class="container selos">
+        <!-- Container dos cartões de selos -->
+        
             <div class="selo-card azul">
+            <!-- Primeiro cartão de selo -->
                 <img src="img/trabalhos/logo-selos/kadea.png" alt="Kadêa">
+                <!-- Imagem do selo -->
                 <h2>KADÊA</h2>
+                <!-- Nome do selo -->
                 <p>KADÊ A JOJO<br>exemplar único, colecionável.</p>
+                <!-- Descrição do selo -->
             </div>
 
             <div class="selo-card rosa">
+            <!-- Segundo cartão de selo -->
                 <img src="img/trabalhos/logo-selos/lullaby.png" alt="Jojo's Lullaby">
                 <h2>JOJO'S LULLABY</h2>
                 <p>a mechanical bird<br>in acid rain.</p>
             </div>
 
             <div class="selo-card verde">
+            <!-- Terceiro cartão de selo -->
                 <img src="img/trabalhos/logo-selos/DGF.png" alt="DGF">
                 <h2>DON'T GIVE ME FOOD – DGF</h2>
                 <p>give me books, please!</p>
@@ -65,9 +106,6 @@
         </div>
     </main>
 
-    <footer>
-
-    </footer>
 </body>
 
 </html>

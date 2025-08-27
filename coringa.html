@@ -1,64 +1,103 @@
 <!DOCTYPE html>
+<!-- Declara que este documento é HTML5 -->
+
 <html lang="pt-br">
+<!-- Elemento raiz da página, idioma definido como português do Brasil -->
 
 <head>
     <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8 -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura a viewport para dispositivos móveis, largura igual à tela e escala inicial 1 -->
+
     <title>Coringa – By Lullaby</title>
+    <!-- Título da página que aparece na aba do navegador -->
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <!-- Importa a fonte Montserrat do Google Fonts -->
+
     <link rel="stylesheet" href="css/style.css">
+    <!-- Link para o arquivo CSS principal do projeto -->
+
     <link rel="icon" href="img/triangulo_page.png" type="image/x-icon">
+    <!-- Define o ícone da aba do navegador -->
+
     <script src="js/coringa.js" defer></script>
+    <!-- Script para carregar o conteúdo dinâmico do projeto (galeria/carrossel), defer garante execução após parsing do HTML -->
 </head>
 
 <body>
+    <!-- Corpo da página -->
+
     <header>
+        <!-- Cabeçalho da página, geralmente com menu e logo -->
         <section class="header">
+            <!-- Seção principal do header -->
+
             <nav class="nav">
+                <!-- Menu de navegação -->
                 <ul>
+                    <!-- Lista de links do menu -->
                     <li class="portfolio"><a href="index.html">PORTFÓLIO</a></li>
+                    <!-- Link para página de portfólio -->
                     <li class="selos"><a href="selos.html">SELOS</a></li>
+                    <!-- Link para página de selos -->
                     <li class="contato"><a href="contato.html">CONTATO</a></li>
+                    <!-- Link para página de contato -->
                 </ul>
             </nav>
+
+            <!-- Botão de menu hamburguer para dispositivos móveis -->
             <div class="hamburger" onclick="
                 document.querySelector('.nav ul').classList.toggle('show');
                 document.querySelector('.icons').classList.toggle('show');
                 ">
+                <!-- Ao clicar, alterna a classe 'show' nos elementos do menu e ícones -->
                 &#9776;
+                <!-- Código Unicode do ícone de hambúrguer -->
             </div>
 
+            <!-- Logo central do site -->
             <div class="logo"><img src="img/triangulo_page.png" alt="Logo"></div>
 
+            <!-- Ícones de redes sociais -->
             <div class="icons">
                 <a href="https://www.behance.net/kadeajojo" target="_blank"><img src="img/behance.svg"
                         alt="Behance"></a>
+                <!-- Link para Behance, abre em nova aba -->
                 <a href="https://www.instagram.com/kadeajojo/" target="_blank"><img src="img/instagram.svg"
                         alt="Instagram"></a>
+                <!-- Link para Instagram -->
                 <a href="https://bsky.app/profile/kadeajojo.bsky.social" target="_blank"><img src="img/bluesky.svg"
                         alt="Bluesky"></a>
+                <!-- Link para Bluesky -->
                 <a href="https://www.youtube.com/@jojoslullaby" target="_blank"><img src="img/youtube.svg"
                         alt="YouTube"></a>
+                <!-- Link para YouTube -->
             </div>
         </section>
     </header>
 
     <main>
+        <!-- Conteúdo principal da página -->
         <div class="container coringa">
+            <!-- Container para o projeto “Coringa”, será populado dinamicamente pelo JS -->
+
             <div class="description-area">
+                <!-- Área de título e descrição do projeto -->
                 <h1>Título</h1>
+                <!-- Título do projeto (substituído dinamicamente pelo JS) -->
                 <p>Descrição do projeto</p>
+                <!-- Descrição do projeto (substituída dinamicamente pelo JS) -->
             </div>
 
             <div class="carousel-area" id="carousel"></div>
+            <!-- Área para a galeria/carrossel do projeto, será populada dinamicamente com imagens ou vídeos via JS -->
         </div>
     </main>
-
-    <footer></footer>
-
-   
-
 </body>
 
 </html>
+<!-- Fim do documento HTML -->
