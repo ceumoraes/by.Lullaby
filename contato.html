@@ -1,65 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>By Lullaby - CONTATO</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon" href="img/triangulo_page.png" type="image/x-icon" />
-  </head>
 
-  <body>
-    <section class="header header-contato">
-      <nav class="nav">
-        <ul>
-          <li class="portfolio"><a href="index.html">PORTFÓLIO</a></li>
-          <li class="selos"><a href="selos.html">SELOS</a></li>
-          <li class="contato ativo"><a href="contato.html">CONTATO</a></li>
-        </ul>
-      </nav>
-          <div class="hamburger" onclick="
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>By Lullaby - CONTATO</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="img/triangulo_page.png" type="image/x-icon" />
+</head>
+
+<body>
+  <section class="header header-contato">
+    <nav class="nav">
+      <ul>
+        <li class="portfolio"><a href="index.html">PORTFÓLIO</a></li>
+        <li class="selos"><a href="selos.html">SELOS</a></li>
+        <li class="contato ativo"><a href="contato.html">CONTATO</a></li>
+      </ul>
+    </nav>
+    <div class="hamburger" onclick="
         document.querySelector('.nav ul').classList.toggle('show');
         document.querySelector('.icons').classList.toggle('show');
     ">
-        &#9776;
+      &#9776;
     </div>
 
-      <div class="logo"><img src="img/triangulo_metade.png" alt="Logo" /></div>
+    <div class="logo"><img src="img/triangulo_metade.png" alt="Logo" /></div>
 
     <div class="icons">
-        <a href="https://www.behance.net/kadeajojo" target="_blank"><img src="img/behance_white.svg" alt="Behance" /></a>
-        <a href="https://www.instagram.com/kadeajojo/" target="_blank"><img src="img/instagram_white.svg" alt="Instagram" /></a>
-        <a href="https://bsky.app/profile/kadeajojo.bsky.social" target="_blank"><img src="img/bluesky_white.svg"
-                alt="Bluesky" /></a>
-        <a href="https://www.youtube.com/@jojoslullaby" target="_blank"><img src="img/youtube_white.svg" alt="YouTube" /></a>
+      <a href="https://www.behance.net/kadeajojo" target="_blank"><img src="img/behance_white.svg" alt="Behance" /></a>
+      <a href="https://www.instagram.com/kadeajojo/" target="_blank"><img src="img/instagram_white.svg"
+          alt="Instagram" /></a>
+      <a href="https://bsky.app/profile/kadeajojo.bsky.social" target="_blank"><img src="img/bluesky_white.svg"
+          alt="Bluesky" /></a>
+      <a href="https://www.youtube.com/@jojoslullaby" target="_blank"><img src="img/youtube_white.svg"
+          alt="YouTube" /></a>
     </div>
+  </section>
+
+  <main class="container-contato">
+    <section class="lado-esquerdo">
+      <div class="logo">
+        <img src="img/triangulo_page.png" alt="logo" />
+      </div>
+      <p class="descricao">AQUI É ONDE VOCÊ PODE ENTRAR EM CONTATO COMIGO (ORÇAMENTOS, DÚVIDAS E ETC.)</p>
+      </div>
     </section>
 
-    <main class="container-contato">
-      <section class="lado-esquerdo">
-        <div class="logo">
-          <img src="img/triangulo_page.png" alt="logo" /></div>
-          <p class="descricao">AQUI É ONDE VOCÊ PODE ENTRAR EM CONTATO COMIGO (ORÇAMENTOS, DÚVIDAS E ETC.)</p>
-        </div>
-      </section>
+    <section class="lado-direito">
+      <div class="form-container">
+        <form>
+          <label for="nome">como posso te chamar?</label>
+          <input type="text" id="nome" />
+          <label for="email">insira seu e-mail</label>
+          <input type="email" id="email" />
+          <label for="mensagem">sua mensagem</label>
+          <textarea id="mensagem" name="mensagem"></textarea>
+          <button type="submit">enviar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+</body>
 
-      <section class="lado-direito">
-        <div class="form-container">
-          <form>
-            <label for="nome">como posso te chamar?</label>
-            <input type="text" id="nome" />
-            <label for="email">insira seu e-mail</label>
-            <input type="email" id="email" />
-            <label for="mensagem">sua mensagem</label>
-            <textarea id="mensagem" name="mensagem"></textarea>
-            <button type="submit">enviar</button>
-          </form>
-        </div>
-      </section>
-    </main>
-  </body>
 </html>
