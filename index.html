@@ -10,9 +10,16 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/triangulo_page.png" type="image/x-icon">
     <script src="js/trabalhos.js" defer></script>
+    <script src="js/preloader.js" defer></script>
+
 </head>
 
 <body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <img src="img/triangulo_page.png" alt="Logo" class="preloader-logo">
+    </div>
+
     <header>
         <section class="header">
             <nav class="nav">
@@ -22,7 +29,8 @@
                     <li class="contato"><a href="contato.html">CONTATO</a></li>
                 </ul>
             </nav>
-            <div class="hamburger" onclick="document.querySelector('.nav ul').classList.toggle('show');document.querySelector('.icons').classList.toggle('show');">
+            <div class="hamburger"
+                onclick="document.querySelector('.nav ul').classList.toggle('show');document.querySelector('.icons').classList.toggle('show');">
                 &#9776;
             </div>
 
