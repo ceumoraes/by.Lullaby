@@ -45,12 +45,20 @@ header {
 .logo {
     position: absolute;
     left: 50%;
-    transform:translateX(-50%);
+    transform: translateX(-50%);
+    width: 100px; /* tamanho padrão */
+    height: auto;
 }
+
+
 
 .logo img {
     width: 100px;
     height: auto;
+}
+
+.logo-mobile {
+    display: none;
 }
 
 .icons {
@@ -326,6 +334,15 @@ button {
 
 /* ---------- RESPONSIVIDADE ---------- */
 @media (max-width: 768px) {
+    .logo-desktop {
+        display: none; /* esconde a desktop */
+    }
+
+    .logo-mobile {
+        display: block; /* mostra a mobile */
+        width: 80px; /* ajusta tamanho para mobile */
+    }
+
     .header {
         justify-content: space-between;
         padding: 20px;
