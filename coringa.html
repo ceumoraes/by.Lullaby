@@ -25,43 +25,52 @@
             <div class="logo"><img src="img/triangulo_page.png" alt="Logo"></div>
 
             <div class="icons">
-                <a href="https://www.behance.net/kadeajojo" target="_blank"><img src="img/behance.svg"
-                        alt="Behance"></a>
-                <a href="https://www.instagram.com/kadeajojo/" target="_blank"><img src="img/instagram.svg"
-                        alt="Instagram"></a>
-                <a href="https://bsky.app/profile/kadeajojo.bsky.social" target="_blank"><img src="img/bluesky.svg"
-                        alt="Bluesky"></a>
-                <a href="https://www.youtube.com/@jojoslullaby" target="_blank"><img src="img/youtube.svg"
-                        alt="YouTube"></a>
+                <a href="https://www.behance.net/kadeajojo" target="_blank"><img src="img/behance.svg" alt="Behance"></a>
+                <a href="https://www.instagram.com/kadeajojo/" target="_blank"><img src="img/instagram.svg" alt="Instagram"></a>
+                <a href="https://bsky.app/profile/kadeajojo.bsky.social" target="_blank"><img src="img/bluesky.svg" alt="Bluesky"></a>
+                <a href="https://www.youtube.com/@jojoslullaby" target="_blank"><img src="img/youtube.svg" alt="YouTube"></a>
             </div>
         </section>
     </header>
 
     <main>
-        <div class="container coringa">
+        <div class="container coringa" style="display: flex; flex-direction: column; align-items: center; gap: 40px;">
 
-            <!-- Esse é o container do carrossel -->
-            <div class="carousel-container">
-                <div class="carousel-area">
-                    <div class="carousel-placeholder">[Carrossel de Imagens]</div>
-                </div>
+            <div class="description-area" style="text-align: center; max-width: 800px;">
+                <h1>Título</h1>
+                <p>Coloque a descrição aqui dsg.</p>
             </div>
 
-            <!-- Esse é o container da descrição -->
-            <div class="description-container">
-                <div class="description-area">
-                    <h1>Título</h1>
-                    <p>Descrição do item selecionado. Este espaço será preenchido dinamicamente conforme a imagem
-                        clicada na página principal.</p>
-                </div>
-            </div>
+            <!-- Espaço para imagens json -->
+            <div class="carousel-area" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;" id="carousel">
 
+            </div>
         </div>
     </main>
 
     <footer>
-
     </footer>
+
+    <!-- exemplo JSON -->
+    <script>
+        const imagens = [
+            { src: "img/carrossel/img1.jpg", alt: "Imagem 1" },
+            { src: "img/carrossel/img2.jpg", alt: "Imagem 2" },
+            { src: "img/carrossel/img3.jpg", alt: "Imagem 3" },
+            { src: "img/carrossel/img4.jpg", alt: "Imagem 4" }
+        ];
+
+        const carousel = document.getElementById("carousel");
+
+        imagens.forEach(img => {
+            const imgElement = document.createElement("img");
+            imgElement.src = img.src;
+            imgElement.alt = img.alt;
+            imgElement.style.width = "200px";
+            imgElement.style.borderRadius = "8px";
+            carousel.appendChild(imgElement);
+        });
+    </script>
 </body>
 
 </html>

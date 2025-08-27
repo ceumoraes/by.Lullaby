@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "name": "ACHADOS DA BEE",
+        "src": "img/trabalhos/cards/AchadosdaBee_card.png",
+        "description": "Projeto Achados da Bee",
+        "galeria": ["img/trabalhos/AchadosdaBee(2020)/abelhabee2.png", 
+        "img/trabalhos/AchadosdaBee(2020)/abelhabeesemfundo.png", 
+        "img/trabalhos/AchadosdaBee(2020)/achadosdabeeLOGO.png", 
+        "img/trabalhos/AchadosdaBee(2020)/achadosdabeePERFIL(1).png", 
+        "img/trabalhos/AchadosdaBee(2020)/achadosdabeepost.png",
+        "img/trabalhos/AchadosdaBee(2020)/achadosdabeesemfundo.png", 
+        "img/trabalhos/AchadosdaBee(2020)/modelocapadestaque2.png", 
+        "img/trabalhos/AchadosdaBee(2020)/modelocapasdestaque1.png"]
+    },
+    {
+        "id": 2,
+        "name": "BOTO FÉ PRODUÇÕES",
+        "src": "img/trabalhos/cards/botofeprod_card.png",
+        "description": "Projeto Boto Fé Produções",
+        "galeria": [""]
+    },
+    {
+        "id": 3,
+        "name": "CÉU",
+        "src": "img/trabalhos/cards/Ceu_card.png",
+        "description": "Projeto Céu",
+        "galeria": [""]
+    },
+    {
+        "id": 4,
+        "name": "MOLOTOV",
+        "src": "img/trabalhos/cards/Molotov_card.png",
+        "description": "Projeto Molotov",
+        "galeria": [""]
+    },
+    {
+        "id": 5,
+        "name": "NOVEMBRO",
+        "src": "img/trabalhos/cards/Novembro_card.png",
+        "description": "Projeto Novembro",
+        "galeria": [""]
+    },
+    {
+        "id": 2,
+        "name": "SETEMBRO",
+        "src": "img/trabalhos/cards/Setembro_card.png",
+        "description": "Projeto Setembro",
+        "galeria": ["img/trabalhos/Setembro(2020)/setembro1.png"]
+    }
+]
