@@ -66,6 +66,18 @@ header {
     gap: 15px;
 }
 
+.icon-mobile {
+    display: none;
+    width: 30px;
+    height: auto;
+}
+
+.icon-desktop {
+    display: block;
+    width: 30px;
+    height: auto;
+}
+
 .icons img {
     width: 30px;
     height: auto;
@@ -347,11 +359,31 @@ button {
         justify-content: space-between;
         padding: 20px;
     }
+    .icon-desktop {
+        display: none;
+    }
+    .icon-mobile {
+        display: block;
+    }
 
     .nav ul,
     .icons {
         display: none;
         z-index: 100;
+    }
+
+    .icons.show {
+        display: flex;
+        flex-direction: column; /* empilha as logos */
+        justify-content: center; /* centraliza verticalmente */
+        align-items: center;     /* centraliza horizontalmente */
+        background: white;
+        position: absolute;
+        top: 250px; /* ajuste se necessário */
+        left: 0;
+        width: 100%;
+        gap: 20px;
+        padding-top: 20px;
     }
 
     .nav ul.show {
