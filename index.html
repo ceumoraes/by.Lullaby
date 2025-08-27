@@ -1,62 +1,95 @@
 <!DOCTYPE html>
 <!-- Declaração do tipo de documento HTML5 -->
+
 <html lang="pt-br">
 <!-- Elemento raiz da página, com idioma definido como português do Brasil -->
 
 <head>
     <meta charset="UTF-8">
+    <!-- Define codificação de caracteres como UTF-8 -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura a viewport para dispositivos móveis, largura igual à tela e escala inicial 1 -->
+
     <title>By Lullaby</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <!-- Título da página que aparece na aba do navegador -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Importa a fonte Montserrat do Google Fonts -->
+
     <link rel="stylesheet" href="css/style.css">
+    <!-- Link para o arquivo CSS principal do projeto -->
+
     <link rel="icon" href="img/triangulo_page.png" type="image/x-icon">
+    <!-- Define o ícone da aba do navegador -->
+
     <script src="js/trabalhos.js" defer></script>
+    <!-- Importa script que provavelmente carrega os trabalhos/projetos; defer garante execução após parsing do HTML -->
+
     <script src="js/preloader.js" defer></script>
+    <!-- Importa script que controla o preloader; também executa após parsing do HTML -->
 
 </head>
 
 <body>
+    <!-- Corpo da página -->
+
     <!-- Preloader -->
     <div id="preloader">
+        <!-- Container do preloader -->
         <img src="img/triangulo_page.png" alt="Logo" class="preloader-logo">
+        <!-- Imagem exibida enquanto a página carrega -->
     </div>
 
     <header>
+        <!-- Cabeçalho da página, geralmente com menu e logo -->
         <section class="header">
+            <!-- Seção principal do header -->
+
             <nav class="nav">
+                <!-- Menu de navegação -->
                 <ul>
+                    <!-- Lista de links do menu -->
                     <li class="portfolio ativo"><a href="index.html">PORTFÓLIO</a></li>
+                    <!-- Link para página de portfólio, com classe "ativo" indicando a página atual -->
                     <li class="selos"><a href="selos.html">SELOS</a></li>
+                    <!-- Link para página de selos -->
                     <li class="contato"><a href="contato.html">CONTATO</a></li>
+                    <!-- Link para página de contato -->
                 </ul>
             </nav>
+
+            <!-- Botão de menu hamburguer para dispositivos móveis -->
             <div class="hamburger"
                 onclick="document.querySelector('.nav ul').classList.toggle('show');document.querySelector('.icons').classList.toggle('show');">
+                <!-- Ao clicar, alterna a classe 'show' nos elementos do menu e ícones -->
                 &#9776;
+                <!-- Código Unicode do ícone de hambúrguer -->
             </div>
 
-
+            <!-- Logo central do site -->
             <div class="logo"><img src="img/triangulo_page.png" alt="Logo"></div>
 
+            <!-- Ícones de redes sociais -->
             <div class="icons">
-                <a href="https://www.behance.net/kadeajojo" target="_blank"><img src="img/behance.svg"
-                        alt="Behance"></a>
-                <a href="https://www.instagram.com/kadeajojo/" target="_blank"><img src="img/instagram.svg"
-                        alt="Instagram"></a>
-                <a href="https://bsky.app/profile/kadeajojo.bsky.social" target="_blank"><img src="img/bluesky.svg"
-                        alt="Bluesky"></a>
-                <a href="https://www.youtube.com/@jojoslullaby" target="_blank"><img src="img/youtube.svg"
-                        alt="YouTube"></a>
+                <a href="https://www.behance.net/kadeajojo" target="_blank"><img src="img/behance.svg" alt="Behance"></a>
+                <!-- Link para Behance, abre em nova aba -->
+                <a href="https://www.instagram.com/kadeajojo/" target="_blank"><img src="img/instagram.svg" alt="Instagram"></a>
+                <!-- Link para Instagram -->
+                <a href="https://bsky.app/profile/kadeajojo.bsky.social" target="_blank"><img src="img/bluesky.svg" alt="Bluesky"></a>
+                <!-- Link para Bluesky -->
+                <a href="https://www.youtube.com/@jojoslullaby" target="_blank"><img src="img/youtube.svg" alt="YouTube"></a>
+                <!-- Link para YouTube -->
             </div>
         </section>
     </header>
 
     <main>
+        <!-- Conteúdo principal da página -->
         <div id="container" class="container"></div>
+        <!-- Container onde os trabalhos/projetos serão carregados dinamicamente via JavaScript -->
     </main>
 
-    <footer></footer>
 </body>
-
 </html>
+
