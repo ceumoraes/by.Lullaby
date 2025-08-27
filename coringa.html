@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coringa – By Lullaby</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/triangulo_page.png" type="image/x-icon">
 </head>
-
 <body>
     <header>
         <section class="header">
@@ -35,42 +32,51 @@
 
     <main>
         <div class="container coringa" style="display: flex; flex-direction: column; align-items: center; gap: 40px;">
-
             <div class="description-area" style="text-align: center; max-width: 800px;">
                 <h1>Título</h1>
-                <p>Coloque a descrição aqui dsg.</p>
+                <p>Descrição do projeto</p>
             </div>
 
-            <!-- Espaço para imagens json -->
-            <div class="carousel-area" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;" id="carousel">
-
-            </div>
+            <div class="carousel-area" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;" id="carousel"></div>
         </div>
     </main>
 
-    <footer>
-    </footer>
+    <footer></footer>
 
-    <!-- exemplo JSON -->
     <script>
-        const imagens = [
-            { src: "img/carrossel/img1.jpg", alt: "Imagem 1" },
-            { src: "img/carrossel/img2.jpg", alt: "Imagem 2" },
-            { src: "img/carrossel/img3.jpg", alt: "Imagem 3" },
-            { src: "img/carrossel/img4.jpg", alt: "Imagem 4" }
-        ];
+    document.addEventListener('DOMContentLoaded', () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = Number(urlParams.get('id'));
 
-        const carousel = document.getElementById("carousel");
+        fetch('../projects.json') // JSON na raiz
+            .then(res => res.json())
+            .then(trabalhos => {
+                const projeto = trabalhos.find(p => p.id === id);
+                if (!projeto) {
+                    console.error('Projeto não encontrado!');
+                    return;
+                }
 
-        imagens.forEach(img => {
-            const imgElement = document.createElement("img");
-            imgElement.src = img.src;
-            imgElement.alt = img.alt;
-            imgElement.style.width = "200px";
-            imgElement.style.borderRadius = "8px";
-            carousel.appendChild(imgElement);
-        });
+                // Atualiza título e descrição
+                const descArea = document.querySelector('.description-area');
+                descArea.querySelector('h1').textContent = projeto.name;
+                descArea.querySelector('p').textContent = projeto.description;
+
+                // Carrega imagens da galeria
+                const carousel = document.getElementById('carousel');
+                projeto.galeria.forEach(imgSrc => {
+                    const imgElement = document.createElement('img');
+                    imgElement.src = imgSrc;
+                    imgElement.alt = projeto.name;
+                    imgElement.style.borderRadius = '8px';
+                    imgElement.style.maxHeight = '700px';
+                    imgElement.style.width = 'auto';
+                    carousel.appendChild(imgElement);
+                });
+            })
+            .catch(err => console.error('Erro ao carregar projects.json:', err));
+    });
     </script>
 </body>
-
 </html>
+
