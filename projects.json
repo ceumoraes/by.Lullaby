@@ -3,7 +3,7 @@
         "id": 1,
         "name": "ACHADOS DA BEE",
         "src": "img/trabalhos/cards/AchadosdaBee_card.png",
-        "description": "Projeto Achados da Bee",
+        "description": "Desenvolvimento de identidade visual completa, abrangendo a definição do nome, criação de logotipo e ícone, seleção tipográfica e construção de uma paleta cromática funcional. O trabalho inclui diretrizes básicas de aplicação para garantir coerência em materiais digitais e impressos, pensando na escalabilidade da marca e em sua comunicação com o público-alvo.",
         "galeria": ["img/trabalhos/AchadosdaBee(2020)/abelhabee2.png", 
         "img/trabalhos/AchadosdaBee(2020)/abelhabeesemfundo.png", 
         "img/trabalhos/AchadosdaBee(2020)/achadosdabeeLOGO.png", 
@@ -62,7 +62,7 @@
         "name": "SETEMBRO",
         "src": "img/trabalhos/cards/Setembro_card.png",
         "description": "Projeto Setembro",
-        "galeria": ["img/trabalhos/Setembro(2020)/setembro1.png"]
+        "galeria": [""]
     },
     {
         "id": 7,
@@ -81,5 +81,16 @@
         "img/trabalhos/TheMuses(2023)/IMG_8853.JPG",
         "img/trabalhos/TheMuses(2023)/IMG_8901.JPG",
         "img/trabalhos/TheMuses(2023)/IMG_8917.JPG"]
+    },
+    {
+        "id": 8,
+        "name": "INFÂNCIA",
+        "src": "img/trabalhos/cards/infancia_card.jpg",
+        "description": "Projeto Infância",
+        "galeria": ["img/trabalhos/Infancia(2023)/04.jpg",
+        "img/trabalhos/Infancia(2023)/02 - PROJ ROBERT.png",
+        "img/trabalhos/Infancia(2023)/01.jpg",
+        "img/trabalhos/Infancia(2023)/03_.jpg",
+        "img/trabalhos/Infancia(2023)/05- final.jpg"]
     }
 ]

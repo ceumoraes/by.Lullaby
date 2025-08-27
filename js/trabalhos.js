@@ -16,8 +16,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     `;
                     // Clique no card leva para coringa.html com o id do projeto
                     div.addEventListener('click', () => {
-                        window.location.href = `coringa.html?id=${item.id}`;
+                        // Verifica se a galeria tem algum item válido
+                        const hasGallery = item.galeria && item.galeria.some(g => g.trim() !== '');
+                        if (hasGallery) {
+                            window.location.href = `coringa.html?id=${item.id}`;
+                        } else {
+                            return;
+                        }
                     });
+
 
                     container.appendChild(div);
                 }
