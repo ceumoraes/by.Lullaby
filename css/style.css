@@ -241,22 +241,62 @@ button {
     text-transform: lowercase;
 }
 
+/* HAMBURGER MENU */
+.hamburger {
+    display: none;
+    font-size: 32px;
+    cursor: pointer;
+    user-select: none;
+    z-index: 1000;
+}
+
 /* RESPONSIVIDADE */
 @media (max-width: 768px) {
     .header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        justify-content: space-between;
         padding: 20px;
     }
 
-    .nav ul {
-        flex-direction: column;
-        gap: 5px;
+    /* Esconde menu e ícones no mobile */
+    .nav ul,
+    .icons {
+        display: none;
+        z-index: 100;
     }
 
-    .icons {
-        justify-content: center;
+     /* Menu em coluna quando ativado */
+    .nav ul.show {
+        display: flex;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 100px;   /* abaixo do header */
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        gap: 20px;
+        border-top: 1px solid #ddd;
+    }
+
+    /* Ícones também visíveis no menu */
+    .icons.show {
+        display: flex;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 250px;   /* abaixo do header */
+        left: 0;
+        width: 100%;
+        gap: 20px;
+        padding-top: 100px;
+    }
+
+    /* Mostra o botão hamburger no mobile */
+    .hamburger {
+        display: block;
+        position: absolute;
+        left: 20px;
     }
 
     .logo img {
@@ -267,4 +307,36 @@ button {
         width: 90%;
         max-width: 300px;
     }
+
+    /* PÁGINA CONTATO */
+    .header-contato {
+    padding: 3rem 7rem;
+    background: #fff;
+}
+
+.logo img {
+    content: url("../img/triangulo_page.png");
+}
+
+.container-contato {
+    margin-top: 4rem;
+    display: flex;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lado-direito {
+    margin-top: 2rem;
+}
+
+.lado-esquerdo .logo {
+    display: none;
+}
+
+.form-container {
+    width: 400px;
+}
 }
