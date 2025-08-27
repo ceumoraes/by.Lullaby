@@ -1,12 +1,25 @@
-// Preloader
-window.addEventListener("load", () => {
-    const preloader = document.getElementById("preloader");
+document.addEventListener("DOMContentLoaded", function () {
+    // Verifica se o preloader já apareceu nesta sessão
+    if (!sessionStorage.getItem("visited")) {
+        const preloader = document.getElementById("preloader");
+        const logo = document.querySelector(".preloader-logo");
 
-    // Aguarda a animação da rotação (5s) antes de desaparecer
-    setTimeout(() => {
-        preloader.style.opacity = 0; // fade out
-        setTimeout(() => {
-            preloader.style.display = "none"; // remove do fluxo
-        }, 500); // tempo do fade
-    }, 3000); // mesmo tempo da rotação
+        // Quando a animação da logo terminar, faz o fade out
+        logo.addEventListener("animationend", () => {
+            preloader.style.transition = "opacity 0.8s ease";
+            preloader.style.opacity = 0;
+
+            setTimeout(() => {
+                preloader.style.display = "none";
+            }, 800);
+        });
+
+        // Marca como visitado nesta sessão
+        sessionStorage.setItem("visited", "true");
+    } else {
+        // Se já visitou, esconde imediatamente
+        const preloader = document.getElementById("preloader");
+        preloader.style.display = "none";
+    }
 });
+
