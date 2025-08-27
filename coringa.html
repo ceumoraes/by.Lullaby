@@ -9,6 +9,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/triangulo_page.png" type="image/x-icon">
+    <script src="js/coringa.js" defer></script>
 </head>
 
 <body>
@@ -38,63 +39,20 @@
     </header>
 
     <main>
-        <div class="container coringa" style="display: flex; flex-direction: column; align-items: center; gap: 40px;">
-            <div class="description-area" style="text-align: center; max-width: 800px;">
+        <div class="container coringa">
+            <div class="description-area">
                 <h1>Título</h1>
                 <p>Descrição do projeto</p>
             </div>
 
-            <div class="carousel-area" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;"
-                id="carousel"></div>
+            <div class="carousel-area" id="carousel"></div>
         </div>
     </main>
 
     <footer></footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const urlParams = new URLSearchParams(window.location.search);
-            const id = Number(urlParams.get('id'));
+   
 
-            fetch('../projects.json') // JSON na raiz
-                .then(res => res.json())
-                .then(trabalhos => {
-                    const projeto = trabalhos.find(p => p.id === id);
-                    if (!projeto) {
-                        console.error('Projeto não encontrado!');
-                        return;
-                    }
-
-                    // Atualiza título e descrição
-                    const descArea = document.querySelector('.description-area');
-                    descArea.querySelector('h1').textContent = projeto.name;
-                    descArea.querySelector('p').textContent = projeto.description;
-
-                    // Carrega imagens da galeria
-                    const carousel = document.getElementById('carousel');
-                    projeto.galeria.forEach(item => {
-                        let element;
-
-                        if (item.toLowerCase().endsWith('.mp4')) {
-                            element = document.createElement('video');
-                            element.src = item;
-                            element.controls = true;
-                        } else {
-                            element = document.createElement('img');
-                            element.src = item;
-                            element.alt = projeto.name;
-                        }
-
-                        // Apenas aplica border-radius, o tamanho será controlado pelo CSS
-                        element.style.borderRadius = "8px";
-
-                        carousel.appendChild(element);
-                    });
-
-                })
-                .catch(err => console.error('Erro ao carregar projects.json:', err));
-        });
-    </script>
 </body>
 
 </html>

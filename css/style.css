@@ -7,13 +7,13 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+body {
+    font-size: 16px;
+}
+
 header {
     padding: 3rem 1rem;
     text-align: center;
-}
-
-body {
-    font-size: 16px;
 }
 
 .header {
@@ -63,7 +63,7 @@ body {
     height: auto;
 }
 
-.icons img:hover{
+.icons img:hover {
     opacity: 0.5;
 }
 
@@ -71,7 +71,8 @@ body {
     font-weight: 700;
 }
 
-#container {
+/* ---------- PÁGINA PORTFÓLIO ---------- */
+.container {
     margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
@@ -85,7 +86,7 @@ body {
 }
 
 .trabalho img {
-    width: 500px;
+    width: 400px; /* do CSS1 (maior destaque) */
     height: auto;
     border-radius: 8px;
     display: block;
@@ -120,7 +121,7 @@ body {
     opacity: 1;
 }
 
-/* PÁGINA SELOS */
+/* ---------- PÁGINA SELOS ---------- */
 .triangulo-frase {
     display: flex;
     flex-direction: column;
@@ -138,7 +139,19 @@ body {
 
 .triangulo-frase p {
     font-size: 15px;
-    font-family: 'Montserrat', sans-serif;
+}
+
+/* Cartões de selos */
+.selo-card {
+    width: 400px;
+    height: 600px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
 }
 
 .selo-card img {
@@ -149,7 +162,28 @@ body {
     cursor: pointer;
 }
 
-/* PÁGINA CONTATO */
+.selo-card.azul {
+    font-size: 20px;
+    background-color: #4a5e93;
+    color: white;
+}
+
+.selo-card.rosa {
+    font-size: 20px;
+    background-color: #f4c9d8;
+}
+
+.selo-card.verde {
+    font-size: 20px;
+    background-color: #9FE3CF;
+}
+
+.selo-card p, 
+.selo-card h2 {
+    color: white;
+}
+
+/* ---------- PÁGINA CONTATO ---------- */
 .header-contato {
     padding: 3rem 7rem;
     background: linear-gradient(90deg, #fff 0%, #fff 50%, #000 50%, #000 100%);
@@ -161,7 +195,6 @@ body {
     background: linear-gradient(90deg, #fff 0%, #fff 50%, #000 50%, #000 100%);
 }
 
-/* Lado esquerdo */
 .lado-esquerdo {
     width: 50%;
     display: flex;
@@ -241,73 +274,62 @@ button {
     text-transform: lowercase;
 }
 
-/* HAMBURGER MENU */
-.hamburger {
-    display: none;
-    font-size: 32px;
-    cursor: pointer;
-    user-select: none;
-    z-index: 1000;
+/* ---------- PÁGINA CORINGA ---------- */
+.container.coringa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
 }
 
-.carousel-area img,
+.description-area {
+    text-align: center;
+    max-width: 60vw;
+}
+
+.description-area h1 {
+    font-size: 60px;
+    margin: 20px 0px 40px 0px;
+}
+
+.description-area p {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.carousel-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.carousel-area img, 
 .carousel-area video {
-    width: auto;       /* mantém a largura original */
-    height: auto;      /* mantém a altura original */
-    max-width: 100%;   /* não ultrapassa o container */
-    max-height: 80vh;  /* limita altura para caber na tela */
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 80vh;
     border-radius: 8px;
     display: block;
 }
 
-
-/* RESPONSIVIDADE */
+/* ---------- RESPONSIVIDADE ---------- */
 @media (max-width: 768px) {
     .header {
         justify-content: space-between;
         padding: 20px;
+        flex-direction: column;
+        align-items: center;
     }
 
-    /* Esconde menu e ícones no mobile */
-    .nav ul,
+    .nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
     .icons {
-        display: none;
-        z-index: 100;
-    }
-
-     /* Menu em coluna quando ativado */
-    .nav ul.show {
-        display: flex;
-        flex-direction: column;
-        background: white;
-        position: absolute;
-        top: 100px;   /* abaixo do header */
-        left: 0;
-        width: 100%;
-        text-align: center;
-        padding: 20px 0;
-        gap: 20px;
-        border-top: 1px solid #ddd;
-    }
-
-    /* Ícones também visíveis no menu */
-    .icons.show {
-        display: flex;
-        flex-direction: column;
-        background: white;
-        position: absolute;
-        top: 250px;   /* abaixo do header */
-        left: 0;
-        width: 100%;
-        gap: 20px;
-        padding-top: 100px;
-    }
-
-    /* Mostra o botão hamburger no mobile */
-    .hamburger {
-        display: block;
-        position: absolute;
-        left: 20px;
+        justify-content: center;
     }
 
     .logo img {
@@ -319,35 +341,29 @@ button {
         max-width: 300px;
     }
 
-    /* PÁGINA CONTATO */
+    /* Página contato no mobile */
     .header-contato {
-    padding: 3rem 7rem;
-    background: #fff;
-}
+        padding: 3rem 7rem;
+        background: #fff;
+    }
 
-.logo img {
-    content: url("../img/triangulo_page.png");
-}
+    .container-contato {
+        margin-top: 4rem;
+        flex-direction: column;
+        height: 100%;
+        background: #fff;
+        align-items: center;
+    }
 
-.container-contato {
-    margin-top: 4rem;
-    display: flex;
-    height: 100%;
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    .lado-direito {
+        margin-top: 2rem;
+    }
 
-.lado-direito {
-    margin-top: 2rem;
-}
+    .lado-esquerdo .logo {
+        display: none;
+    }
 
-.lado-esquerdo .logo {
-    display: none;
-}
-
-.form-container {
-    width: 400px;
-}
+    .form-container {
+        width: 400px;
+    }
 }
