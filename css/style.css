@@ -250,6 +250,17 @@ button {
     z-index: 1000;
 }
 
+.carousel-area img,
+.carousel-area video {
+    width: auto;       /* mantém a largura original */
+    height: auto;      /* mantém a altura original */
+    max-width: 100%;   /* não ultrapassa o container */
+    max-height: 80vh;  /* limita altura para caber na tela */
+    border-radius: 8px;
+    display: block;
+}
+
+
 /* RESPONSIVIDADE */
 @media (max-width: 768px) {
     .header {

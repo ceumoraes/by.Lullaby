@@ -46,7 +46,9 @@
         "name": "MOLOTOV",
         "src": "img/trabalhos/cards/Molotov_card.png",
         "description": "Projeto Molotov",
-        "galeria": [""]
+        "galeria": ["img/trabalhos/Molotov(2021)/Ernesto.mp4", 
+        "img/trabalhos/Molotov(2021)/Ernestospray (1).png", 
+        "img/trabalhos/Molotov(2021)/molotovsembolha.png"]
     },
     {
         "id": 5,
@@ -56,10 +58,28 @@
         "galeria": [""]
     },
     {
-        "id": 2,
+        "id": 6,
         "name": "SETEMBRO",
         "src": "img/trabalhos/cards/Setembro_card.png",
         "description": "Projeto Setembro",
         "galeria": ["img/trabalhos/Setembro(2020)/setembro1.png"]
+    },
+    {
+        "id": 7,
+        "name": "THE MUSES",
+        "src": "img/trabalhos/TheMuses(2023)/IMG_8917.JPG",
+        "description": "Projeto Setembro",
+        "galeria": ["img/trabalhos/TheMuses(2023)/IMG_0906.JPG", 
+        "img/trabalhos/TheMuses(2023)/IMG_0917.JPG", 
+        "img/trabalhos/TheMuses(2023)/IMG_0921.JPG", 
+        "img/trabalhos/TheMuses(2023)/IMG_0931.JPG", 
+        "img/trabalhos/TheMuses(2023)/IMG_0937.JPG", 
+        "img/trabalhos/TheMuses(2023)/IMG_0947.JPG", 
+        "img/trabalhos/TheMuses(2023)/IMG_0983.JPG",
+        "img/trabalhos/TheMuses(2023)/IMG_8800.JPG",
+        "img/trabalhos/TheMuses(2023)/IMG_8849.JPG",
+        "img/trabalhos/TheMuses(2023)/IMG_8853.JPG",
+        "img/trabalhos/TheMuses(2023)/IMG_8901.JPG",
+        "img/trabalhos/TheMuses(2023)/IMG_8917.JPG"]
     }
 ]
