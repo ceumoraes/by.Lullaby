@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coringa – By Lullaby</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/triangulo_page.png" type="image/x-icon">
 </head>
-
 <body>
     <header>
         <section class="header">
@@ -25,14 +22,10 @@
             <div class="logo"><img src="img/triangulo_page.png" alt="Logo"></div>
 
             <div class="icons">
-                <a href="https://www.behance.net/kadeajojo" target="_blank"><img src="img/behance.svg"
-                        alt="Behance"></a>
-                <a href="https://www.instagram.com/kadeajojo/" target="_blank"><img src="img/instagram.svg"
-                        alt="Instagram"></a>
-                <a href="https://bsky.app/profile/kadeajojo.bsky.social" target="_blank"><img src="img/bluesky.svg"
-                        alt="Bluesky"></a>
-                <a href="https://www.youtube.com/@jojoslullaby" target="_blank"><img src="img/youtube.svg"
-                        alt="YouTube"></a>
+                <a href="https://www.behance.net/kadeajojo" target="_blank"><img src="img/behance.svg" alt="Behance"></a>
+                <a href="https://www.instagram.com/kadeajojo/" target="_blank"><img src="img/instagram.svg" alt="Instagram"></a>
+                <a href="https://bsky.app/profile/kadeajojo.bsky.social" target="_blank"><img src="img/bluesky.svg" alt="Bluesky"></a>
+                <a href="https://www.youtube.com/@jojoslullaby" target="_blank"><img src="img/youtube.svg" alt="YouTube"></a>
             </div>
         </section>
     </header>
@@ -44,57 +37,46 @@
                 <p>Descrição do projeto</p>
             </div>
 
-            <div class="carousel-area" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;"
-                id="carousel"></div>
+            <div class="carousel-area" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;" id="carousel"></div>
         </div>
     </main>
 
     <footer></footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const urlParams = new URLSearchParams(window.location.search);
-            const id = Number(urlParams.get('id'));
+    document.addEventListener('DOMContentLoaded', () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = Number(urlParams.get('id'));
 
-            fetch('../projects.json') // JSON na raiz
-                .then(res => res.json())
-                .then(trabalhos => {
-                    const projeto = trabalhos.find(p => p.id === id);
-                    if (!projeto) {
-                        console.error('Projeto não encontrado!');
-                        return;
-                    }
+        fetch('../projects.json') // JSON na raiz
+            .then(res => res.json())
+            .then(trabalhos => {
+                const projeto = trabalhos.find(p => p.id === id);
+                if (!projeto) {
+                    console.error('Projeto não encontrado!');
+                    return;
+                }
 
-                    // Atualiza título e descrição
-                    const descArea = document.querySelector('.description-area');
-                    descArea.querySelector('h1').textContent = projeto.name;
-                    descArea.querySelector('p').textContent = projeto.description;
+                // Atualiza título e descrição
+                const descArea = document.querySelector('.description-area');
+                descArea.querySelector('h1').textContent = projeto.name;
+                descArea.querySelector('p').textContent = projeto.description;
 
-                    // Carrega imagens da galeria
-                    const carousel = document.getElementById('carousel');
-                    projeto.galeria.forEach(item => {
-                        let element;
-
-                        if (item.toLowerCase().endsWith('.mp4')) {
-                            element = document.createElement('video');
-                            element.src = item;
-                            element.controls = true;
-                        } else {
-                            element = document.createElement('img');
-                            element.src = item;
-                            element.alt = projeto.name;
-                        }
-
-                        // Apenas aplica border-radius, o tamanho será controlado pelo CSS
-                        element.style.borderRadius = "8px";
-
-                        carousel.appendChild(element);
-                    });
-
-                })
-                .catch(err => console.error('Erro ao carregar projects.json:', err));
-        });
+                // Carrega imagens da galeria
+                const carousel = document.getElementById('carousel');
+                projeto.galeria.forEach(imgSrc => {
+                    const imgElement = document.createElement('img');
+                    imgElement.src = imgSrc;
+                    imgElement.alt = projeto.name;
+                    imgElement.style.borderRadius = '8px';
+                    imgElement.style.maxHeight = '700px';
+                    imgElement.style.width = 'auto';
+                    carousel.appendChild(imgElement);
+                });
+            })
+            .catch(err => console.error('Erro ao carregar projects.json:', err));
+    });
     </script>
 </body>
-
 </html>
+
